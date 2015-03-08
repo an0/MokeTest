@@ -13,18 +13,7 @@
 		C907FAE61A85690C00A57ACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C907FAE41A85690C00A57ACB /* Main.storyboard */; };
 		C907FAE81A85690C00A57ACB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C907FAE71A85690C00A57ACB /* Images.xcassets */; };
 		C907FAEB1A85690C00A57ACB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C907FAE91A85690C00A57ACB /* LaunchScreen.xib */; };
-		C907FAF71A85690C00A57ACB /* MokeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C907FAF61A85690C00A57ACB /* MokeTestTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C907FAF11A85690C00A57ACB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C907FACF1A85690C00A57ACB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C907FAD61A85690C00A57ACB;
-			remoteInfo = MokeTest;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C907FAD71A85690C00A57ACB /* MokeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MokeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +26,10 @@
 		C907FAE51A85690C00A57ACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C907FAE71A85690C00A57ACB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C907FAEA1A85690C00A57ACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C907FAF01A85690C00A57ACB /* MokeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MokeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C907FAF51A85690C00A57ACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C907FAF61A85690C00A57ACB /* MokeTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MokeTestTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C907FAD41A85690C00A57ACB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C907FAED1A85690C00A57ACB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				C907FAD91A85690C00A57ACB /* MokeTest */,
-				C907FAF31A85690C00A57ACB /* MokeTestTests */,
 				C907FAD81A85690C00A57ACB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				C907FAD71A85690C00A57ACB /* MokeTest.app */,
-				C907FAF01A85690C00A57ACB /* MokeTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,23 +79,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C907FAF31A85690C00A57ACB /* MokeTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				C907FAF61A85690C00A57ACB /* MokeTestTests.m */,
-				C907FAF41A85690C00A57ACB /* Supporting Files */,
-			);
-			path = MokeTestTests;
-			sourceTree = "<group>";
-		};
-		C907FAF41A85690C00A57ACB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C907FAF51A85690C00A57ACB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,24 +99,6 @@
 			productReference = C907FAD71A85690C00A57ACB /* MokeTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C907FAEF1A85690C00A57ACB /* MokeTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C907FAFD1A85690C00A57ACB /* Build configuration list for PBXNativeTarget "MokeTestTests" */;
-			buildPhases = (
-				C907FAEC1A85690C00A57ACB /* Sources */,
-				C907FAED1A85690C00A57ACB /* Frameworks */,
-				C907FAEE1A85690C00A57ACB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C907FAF21A85690C00A57ACB /* PBXTargetDependency */,
-			);
-			name = MokeTestTests;
-			productName = MokeTestTests;
-			productReference = C907FAF01A85690C00A57ACB /* MokeTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +110,6 @@
 				TargetAttributes = {
 					C907FAD61A85690C00A57ACB = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					C907FAEF1A85690C00A57ACB = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = C907FAD61A85690C00A57ACB;
 					};
 				};
 			};
@@ -189,7 +127,6 @@
 			projectRoot = "";
 			targets = (
 				C907FAD61A85690C00A57ACB /* MokeTest */,
-				C907FAEF1A85690C00A57ACB /* MokeTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,13 +139,6 @@
 				C907FAE61A85690C00A57ACB /* Main.storyboard in Resources */,
 				C907FAEB1A85690C00A57ACB /* LaunchScreen.xib in Resources */,
 				C907FAE81A85690C00A57ACB /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C907FAEE1A85690C00A57ACB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,23 +155,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C907FAEC1A85690C00A57ACB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C907FAF71A85690C00A57ACB /* MokeTestTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C907FAF21A85690C00A57ACB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C907FAD61A85690C00A57ACB /* MokeTest */;
-			targetProxy = C907FAF11A85690C00A57ACB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C907FAE41A85690C00A57ACB /* Main.storyboard */ = {
@@ -300,6 +214,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -334,6 +249,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -359,40 +275,6 @@
 			};
 			name = Release;
 		};
-		C907FAFE1A85690C00A57ACB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MokeTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MokeTest.app/MokeTest";
-			};
-			name = Debug;
-		};
-		C907FAFF1A85690C00A57ACB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MokeTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MokeTest.app/MokeTest";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,14 +294,7 @@
 				C907FAFC1A85690C00A57ACB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		C907FAFD1A85690C00A57ACB /* Build configuration list for PBXNativeTarget "MokeTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C907FAFE1A85690C00A57ACB /* Debug */,
-				C907FAFF1A85690C00A57ACB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
