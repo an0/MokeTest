@@ -5,7 +5,7 @@
 1. 在正常发送 HTTP request、接收 response 一段时间后，某一个 request 会引发超时失败。此后一定时间内的所有 request 都会超时。
 2. 重启 app 可以解决；切换网络（WiFi <-> 3G）可以解决；关开网络（暂时启用飞行模式然后马上关闭飞行模式）可以解决。
 
-# 分析：
+# 分析
 应该是 HTTP persistent connection 的问题。当某一个 persistent connection 异常后，所有经由此 connection 发送的 request 都会超时。但这种异常并没有导致 persistent connection 中断，所以只要 request 之间的时间间隔不大于 keep alive 的时间长度，此 connection 还是会被一直继续复用，所以继续超时。
 
 各种手动解决方案也反面证实是 persistent connection 的问题。因为所有解决方案之所以有效，都是因为它们迫使当前 persistent connection 中断后重现建立一个新的 connection。
