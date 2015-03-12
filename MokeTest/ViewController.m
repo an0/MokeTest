@@ -32,12 +32,19 @@
                   ];
     
     _connections = [NSMutableSet set];
+    _bgTask = UIBackgroundTaskInvalid;
     
-    [self sendRequest];
+    [self sendRequests];
 }
 
-- (void)sendRequest {
-    NSString *urlStr = _URLs[arc4random_uniform((u_int32_t)(_URLs.count))];
+- (void)sendRequests {
+    [self sendRequest:_URLs.count - 1];
+    NSUInteger index = arc4random_uniform((u_int32_t)(_URLs.count - 1));
+    [self sendRequest:index];
+}
+
+- (void)sendRequest:(NSUInteger)index {
+    NSString *urlStr = _URLs[index];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:15];
 #warning 请指定 access token
@@ -48,12 +55,14 @@
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
     [_connections addObject:connection];
     
-    _bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
-        if (_bgTask != UIBackgroundTaskInvalid) {
-            [[UIApplication sharedApplication] endBackgroundTask:_bgTask];
-            _bgTask = UIBackgroundTaskInvalid;
-        }
-    }];
+    if (_bgTask == UIBackgroundTaskInvalid) {
+        _bgTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+            if (_bgTask != UIBackgroundTaskInvalid) {
+                [[UIApplication sharedApplication] endBackgroundTask:_bgTask];
+                _bgTask = UIBackgroundTaskInvalid;
+            }
+        }];
+    }
 }
 
 #pragma mark - NSURLConnection delegate methods
@@ -75,7 +84,7 @@
             [[UIApplication sharedApplication] endBackgroundTask:_bgTask];
             _bgTask = UIBackgroundTaskInvalid;
         }
-        [self performSelector:@selector(sendRequest) withObject:nil afterDelay:5];
+        [self performSelector:@selector(sendRequests) withObject:nil afterDelay:5];
     }
 }
 
@@ -87,7 +96,7 @@
             [[UIApplication sharedApplication] endBackgroundTask:_bgTask];
             _bgTask = UIBackgroundTaskInvalid;
         }
-        [self performSelector:@selector(sendRequest) withObject:nil afterDelay:10];
+        [self performSelector:@selector(sendRequests) withObject:nil afterDelay:10];
     }
 }
 
